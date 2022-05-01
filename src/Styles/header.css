@@ -1,0 +1,61 @@
+@import url("shared.css");
+
+.header{
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 600px){
+    .header{
+        flex-direction: column;
+    }
+}
+
+.searchContainer{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.searchContainer p{
+    margin: 0 65px;
+}
+
+.searchBtn{
+    width: 125px;
+    height: 45px;
+    margin: 50px 0;
+    background-color: var(--blue-soft);
+    border: none;
+    margin: none;
+    border-radius: 15px;
+    color: var(--white-50);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+}
+
+.searchBtn:hover{
+    background-color: var(--blue-medium);
+}
+
+.imgContainer{
+    display: grid;
+    place-content: center;
+}
+
+#imgMan{
+    height: calc(100vh - 30px);
+    object-fit: contain;
+    margin-right: 45px;
+    margin-top: auto;
+}

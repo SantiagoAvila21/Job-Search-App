@@ -1,0 +1,75 @@
+@import url("shared.css");
+
+.top{
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--white-50);
+    width: 100%;
+    height: 60px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    z-index: 99;
+}
+
+.topLeft{
+    margin: 15px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topRight{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInBt{
+    cursor: pointer;
+    font-size: medium;
+    background-color: var(--blue-soft);
+    color: white;
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.topList{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    margin: 0 35%;
+    padding: 0;
+}
+
+.topListItem{
+    float: left;
+    margin: 0 25px;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+.link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #333333;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}  
+
+.link:hover:after { transform: scaleX(1); }
+
+#logo{
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+}
