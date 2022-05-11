@@ -1,0 +1,23 @@
+@import url("shared.css");
+
+input{
+    border: none;
+    border-bottom: 1px solid var(--blue-soft);
+}
+
+input:focus{
+    outline: none;
+}
+
+.sendButton{
+    background-color: var(--blue-medium);
+    min-width: fit-content;
+    width: 85px;
+    height: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sendButton:hover{
+    background-color: var(--blue-soft);
+}

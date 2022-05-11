@@ -23,14 +23,14 @@ const infoCards = [
 
 const Cards = () => {
   return (
-    <>
+    <div className="cardSection">
       <h2 id="titleSection">The benefits of our App</h2>
-      <section className="cardSection">
+      <section className="cards">
         {infoCards.map((info) => (
           <Card key={info.id} info={info} />
         ))}
       </section>
-    </>
+    </div>
   );
 };
 

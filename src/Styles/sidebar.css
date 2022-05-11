@@ -1,0 +1,39 @@
+@import url("shared.css");
+
+.sideOpen{
+    height: 100vh;
+    width: 40vw;
+    background-color: var(--blue-medium);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    transition: all 1s ease-in-out;
+    border-left: 1px solid black;
+    z-index: 22;
+    display: none;
+}
+
+.show{
+    transform: translateX(calc(100% - 80vw));
+}
+
+.sideList{
+    list-style-type: none;
+}
+
+.sideOpen .sideListItem{
+   display:block;
+   float:left;
+   width: 100%;
+   margin: 5px 0;
+   text-align: left;
+}
+
+
+@media (max-width: 800px){
+    .sideOpen{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}
