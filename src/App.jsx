@@ -11,6 +11,7 @@ import {useContext, useEffect, useState} from 'react'
 import { authContext } from './Context/AuthContext';
 import { postWithToken } from './api';
 import Offers from './Pages/Offers';
+import NotFound from './Pages/NotFound'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -45,8 +46,7 @@ function App() {
           <Route path = "/offers" element={<Offers />} />
           <Route path = "/applications" element={<Applications />} />
           <Route path = "/my_offers" element={<MyOffers />} />
-          {/* <Route path="/job/:id" element={<SingleJob />} /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
