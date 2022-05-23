@@ -52,7 +52,6 @@ const Job = ({job}) => {
             <ToastContainer position='top-center'></ToastContainer>
             <div className="leftSideJob">
                 <h3 id="jobTitle">{job.title}</h3>
-                <p>{job._id} +++++++ </p>
                 <p id="jobDesc">{job.description}</p>
                 <h5 id="jobEmployer"><i className="fa-solid fa-address-card"></i>{" Employer: "+job.employer.name}</h5>
                 <h4 id="jobSalary">{`Salary: $ ${job.salary}`}</h4>
@@ -68,7 +67,8 @@ const Job = ({job}) => {
                     <>
                         <h3 className="applied">You've already applied</h3>
                         <button id="UnApplyBtn" onClick={UnApplyToJob}> Unapply </button>
-                </>)}
+                    </>
+                )}
                 {context.auth.role === "applicant" && !applied && <button id="ApplyBtn" onClick={ApplyToJob}> Apply </button>}
             </div>
         </div>

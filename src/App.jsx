@@ -43,8 +43,8 @@ function App() {
           <Route path = "/signup" element={<SignUp />} />
           <Route path = "/postjob" element={<PostJob />} />
           <Route path = "/offers" element={<Offers />} />
-          <Route path = "/applications" element={<Applications />}></Route>
-          <Route path = "/my_offers" element={<MyOffers />}></Route>
+          <Route path = "/applications" element={<Applications />} />
+          <Route path = "/my_offers" element={<MyOffers />} />
           {/* <Route path="/job/:id" element={<SingleJob />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

@@ -13,10 +13,9 @@ const Offers = () => {
     const {jobs, setJobs} = useContext(jobsContext);
     const [allJobs, setAllJobs] = useState([]);
 
-    const handleChangeSearch = (event) => {
-        setSearchValue(event.target.value);
-        setJobs(filteredJobs);
-    }
+    console.log(jobs, allJobs);
+
+    const handleChangeSearch = (event) => setSearchValue(event.target.value);
     
     useEffect(() => {
         getWithToken('/api/jobs')
@@ -30,8 +29,13 @@ const Offers = () => {
         });
     },[]);
     
+
+    useEffect(() => {
+        setJobs(filteredJobs);
+    },[searchValue]);
     
     const filteredJobs = allJobs.filter(job =>  job.title.toLowerCase().includes(searchValue.toLowerCase()));
+
 
     /*const getCategoriesJobs = () => {
         getWithToken('')
