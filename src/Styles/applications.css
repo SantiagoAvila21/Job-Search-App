@@ -1,0 +1,12 @@
+.Applications{
+    padding-top: 65px;
+}
+
+#noJob{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: larger;
+}

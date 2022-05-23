@@ -1,11 +1,13 @@
 import "../Styles/form.css"
 
-const Form = ({title, children}) => {
+const Form = ({title, children, onSubmit}) => {
 
     return (
         <div className="form">
             <h2>{title}</h2>
-            {children}
+            <form onSubmit={onSubmit}>
+                {children}
+            </form>
         </div>
     );
 }

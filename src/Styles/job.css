@@ -1,0 +1,87 @@
+@import url("shared.css");
+
+.jobContainer{
+    background-color: var(--white-50);
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.rightSideJob{
+    display: grid;
+    place-content: center;
+}
+
+.leftSideJob{
+    width: 60%;
+    justify-self: start;
+    margin-right: auto;
+}
+
+#ApplyBtn, #UnApplyBtn{
+    background-color: var(--blue-medium);
+    cursor: pointer;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 15px;
+    height: calc(100% + 20px);
+    color: var(--white-50);
+    border: 1px solid black;
+    margin-right: 50px;
+    font-size: large;
+}
+
+#ApplyBtn:hover{
+    background-color: var(--blue-soft);
+}
+
+#UnApplyBtn{
+    background-color: salmon;
+}
+
+#UnApplyBtn:hover{
+    background-color: red;
+}
+
+#jobSalary{
+    color: green;
+}
+
+.categoriesContainer{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-items: center;
+}
+
+.applied{
+    color: blue;
+}
+
+#jobCategory{
+    margin: 0 10px;
+    height: max-content;
+}
+
+@media (max-width: 1000px){
+    .jobContainer{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+    }
+    #ApplyBtn, #UnApplyBtn{
+        height: 35px;
+        width: calc(100% + 15px);
+        margin: 0;
+        font-size: medium;
+    }
+    .leftSideJob{
+        width: 100%;
+    }
+}

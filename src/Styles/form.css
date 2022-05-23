@@ -3,6 +3,9 @@
 input{
     border: none;
     border-bottom: 1px solid var(--blue-soft);
+    width: 100%;
+    padding: 0 0 5px 5px;
+    background: rgba(0, 0, 0, 0);
 }
 
 input:focus{
@@ -10,14 +13,17 @@ input:focus{
 }
 
 .sendButton{
+    color: var(--white-50);
     background-color: var(--blue-medium);
     min-width: fit-content;
     width: 85px;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .sendButton:hover{
     background-color: var(--blue-soft);
 }
+

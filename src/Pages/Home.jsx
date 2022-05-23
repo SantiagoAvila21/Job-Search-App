@@ -1,13 +1,13 @@
 import Header from '../Components/Header';
 import Cards from '../Components/Cards';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
-
     return (
-        <div>
+        <>
             <Header />
             <Cards />
-        </div>
+        </>
     );
 }
 

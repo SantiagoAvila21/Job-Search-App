@@ -19,6 +19,7 @@
 
 .sideList{
     list-style-type: none;
+
 }
 
 .sideOpen .sideListItem{
@@ -29,8 +30,23 @@
    text-align: left;
 }
 
+.sideSignBt{
+    cursor: pointer;
+    font-size: medium;
+    background-color: var(--blue-soft);
+    color: white;
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 80px;
+}
 
-@media (max-width: 800px){
+.sideSignBt:hover{
+    background-color: steelblue;
+}
+
+
+@media (max-width: 1000px){
     .sideOpen{
         display: flex;
         justify-content: center;

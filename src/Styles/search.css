@@ -1,0 +1,28 @@
+@import url("shared.css");
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.searchInput{
+    width: 85%;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 45px;
+    padding: 9px 4px 9px 50px;
+    font-size: 20px;
+    margin-top: 25px;
+    background: transparent url("../Assets/Icons/search.svg") no-repeat 5px center;
+    background-size: 30px 30px;
+    background-position: 1% 50%;
+    box-shadow: 5px 5px 10px;
+}
+
+@media (max-width: 1000px){
+    .searchInput{
+        height: 35px;
+    }
+}
