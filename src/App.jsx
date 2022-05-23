@@ -12,6 +12,7 @@ import { authContext } from './Context/AuthContext';
 import { postWithToken } from './api';
 import Offers from './Pages/Offers';
 import NotFound from './Pages/NotFound'
+import ProtectedRoute from './Pages/ProtectedRoute';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -43,10 +44,26 @@ function App() {
           <Route path = "/" element={<Home />} />
           <Route path = "/login" element={<Login />} />
           <Route path = "/signup" element={<SignUp />} />
-          <Route path = "/postjob" element={<PostJob />} />
-          <Route path = "/offers" element={<Offers />} />
-          <Route path = "/applications" element={<Applications />} />
-          <Route path = "/my_offers" element={<MyOffers />} />
+          <Route path = "/postjob" element={
+            <ProtectedRoute>
+              <PostJob />
+            </ProtectedRoute>
+          }/>
+          <Route path = "/offers" element={
+            <ProtectedRoute>
+              <Offers />
+            </ProtectedRoute>
+          }/>
+          <Route path = "/applications" element={
+            <ProtectedRoute>
+              <Applications />
+            </ProtectedRoute>
+          }/>
+          <Route path = "/my_offers" element={
+            <ProtectedRoute>
+              <MyOffers />
+            </ProtectedRoute>
+          }/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
