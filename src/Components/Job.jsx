@@ -45,6 +45,7 @@ const Job = ({job}) => {
             return;
         }
         if(applicants.some(applicant => applicant.id === context.auth.id)) setApplied(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     return (
@@ -58,8 +59,12 @@ const Job = ({job}) => {
                 <div className='categoriesContainer'>
                     <h4>Categories: </h4>
                     {job.category.map((cate,index) => {
-                        return <p id="jobCategory" key={index + job._id}>{cate}</p>
+                        return <p className="jobCategory" key={index + job._id}>{cate}</p>
                     })}
+                </div>
+                <div className='locationsContainer'>
+                    <h4>Location: </h4>
+                    <p className='jobLocation'><i className="fa-solid fa-earth-americas"></i> {job.location.country}, {job.location.province}, {job.location.city}</p>
                 </div>
             </div>
             <div className='rightSideJob'>

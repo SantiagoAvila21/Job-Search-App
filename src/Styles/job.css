@@ -53,18 +53,22 @@
     color: green;
 }
 
-.categoriesContainer{
+.categoriesContainer, .locationsContainer{
     display: flex;
+    height: 40px;
     flex-direction: row;
-    height: max-content;
     align-items: center;
+}
+
+.jobLocation{
+    margin: 0 15px;
 }
 
 .applied{
     color: blue;
 }
 
-#jobCategory{
+.jobCategory{
     margin: 0 10px;
     height: max-content;
 }

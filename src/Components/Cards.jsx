@@ -11,12 +11,12 @@ const infoCards = [
   {
     id: 2,
     icon: "https://cdn-icons-png.flaticon.com/512/1243/1243560.png",
-    title: "Find the job of your dreams",
+    title: "Apply for all the offers, you are looking for",
     desc: "Fugiat occaecat fugiat velit incididunt excepteur dolor culpa deserunt dolor mollit qui qui culpa. Iqua nulla sint nulla.",
   },{
     id: 3,
     icon: "https://cdn-icons-png.flaticon.com/512/1283/1283342.png",
-    title: "Find the job of your dreams",
+    title: "Work with the best teams",
     desc: "Fugiat occaecat fugiat velit incididunt excepteur dolor culpa deserunt dolor mollit qui qui culpa. Iqua nulla sint nulla.",
   },
 ];

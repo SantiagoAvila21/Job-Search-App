@@ -13,8 +13,6 @@ const Offers = () => {
     const {jobs, setJobs} = useContext(jobsContext);
     const [allJobs, setAllJobs] = useState([]);
 
-    console.log(jobs, allJobs);
-
     const handleChangeSearch = (event) => setSearchValue(event.target.value);
     
     useEffect(() => {
@@ -27,19 +25,18 @@ const Offers = () => {
         .catch(err => {
             console.error(err)
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
     
 
     useEffect(() => {
         setJobs(filteredJobs);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[searchValue]);
     
     const filteredJobs = allJobs.filter(job =>  job.title.toLowerCase().includes(searchValue.toLowerCase()));
 
 
-    /*const getCategoriesJobs = () => {
-        getWithToken('')
-    }*/
     return (
         <div className="offers">
             <Search handleChange = {handleChangeSearch} searchValue={searchValue} />
