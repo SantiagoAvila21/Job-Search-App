@@ -24,7 +24,9 @@ const MyOffers = () => {
     return (
         <div className="Applications">
                 {loading ? (
-                    <p>LOADING ...</p>
+                    <div className="loadingContainer">
+                        <div class="lds-dual-ring"></div>
+                    </div>
                 ) : (
                     <>
                         {jobs.error ? (

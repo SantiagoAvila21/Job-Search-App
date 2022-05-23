@@ -41,7 +41,9 @@ const Offers = () => {
         <div className="offers">
             <Search handleChange = {handleChangeSearch} searchValue={searchValue} />
             {loading ? (
-                <p>LOADING ...</p>
+                <div className="loadingContainer">
+                    <div class="lds-dual-ring"></div>
+                </div>
             ) : (
                 <>
                     {jobs.error ? (
